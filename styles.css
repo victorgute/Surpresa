@@ -1,0 +1,71 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    transition: background-color 2s ease;
+}
+
+body.revelar {
+    background-color: #1e90ff; /* Fundo azul quando a mensagem for revelada */
+}
+
+.container {
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+h1 {
+    color: #FFA500; /* Laranja cor de sol */
+    font-size: 2.5em;
+    margin: 0;
+    animation: slideIn 2s ease-in-out;
+    text-shadow: 0 0 10px rgba(255, 165, 0, 0.8), 0 0 20px rgba(255, 165, 0, 0.6), 0 0 30px rgba(255, 165, 0, 0.4);
+    transition: color 2s ease;
+}
+
+body.revelar h1 {
+    color: #fff; /* Texto branco quando a mensagem for revelada */
+    text-shadow: none;
+}
+
+button {
+    background-color: #FFA500;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    animation: fadeIn 4s ease-in-out;
+}
+
+button:hover {
+    background-color: #FF8C00;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
